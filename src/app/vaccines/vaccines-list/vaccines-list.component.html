@@ -1,0 +1,19 @@
+<app-generic-list [list]="vaccines">    
+    <ng-container content>
+        <div *ngFor="let vaccine of vaccines; let index=index" class="vaccine-container">
+            <div>
+                {{index+1}}. {{vaccine.title | uppercase}}
+                <button style="margin-left: 1rem;" (click)="remove(index)">Remove</button>
+            </div>
+            
+            <div>
+                {{vaccine.availableDate | date:"dd-MMMM-yyyy" | uppercase}}
+            </div>
+            
+            <div>
+                {{vaccine.price | currency}}
+            </div>
+        </div>
+    </ng-container>
+</app-generic-list>
+

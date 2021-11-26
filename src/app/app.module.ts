@@ -1,0 +1,28 @@
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { VaccinesListComponent } from './vaccines/vaccines-list/vaccines-list.component';
+import { GenericListComponent } from './utilities/generic-list/generic-list.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
+import { MenuComponent } from './menu/menu.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    VaccinesListComponent,
+    GenericListComponent,
+    MenuComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MaterialModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
